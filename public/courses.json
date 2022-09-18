@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "courseName": "Introduction to Startup",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, explicabo!"
+  },
+  {
+    "id": 2,
+    "courseName": "Types of Business Model",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, explicabo!"
+  },
+  {
+    "id": 3,
+    "courseName": "Startup Business and Growith Metrics",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, explicabo!"
+  },
+  {
+    "id": 4,
+    "courseName": "Business Model Case Study",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, explicabo!"
+  },
+  {
+    "id": 5,
+    "courseName": "Advanced Topic for Startup",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, explicabo!"
+  }
+]
