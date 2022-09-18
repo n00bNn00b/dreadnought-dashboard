@@ -10,8 +10,8 @@ const Courses = () => {
   console.log(courses);
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 w-full my-20">
-      {courses.map((course) => (
-        <Course key={course.id} />
+      {courses.slice((0, 2)).map((course) => (
+        <Course key={course.id} course={course} />
       ))}
     </div>
   );

@@ -8,7 +8,7 @@ const Events = () => {
       <div className="card-body">
         <h2 className="card-title">Event</h2>
         <p>
-          <li>Live Support Session at 8:00 PM, {date} </li>
+          <li>Orientation at 8:00 PM, {date} </li>
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Lorem ipsum dolor sit amet.</li>

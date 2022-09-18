@@ -7,7 +7,7 @@ const Startup = () => {
   return (
     <div>
       <StartupNav />
-      <div className="lg:flex md:flex-grow gap-5">
+      <div className="lg:flex lg:mx-5 gap-5">
         <Courses />
 
         <Events />
