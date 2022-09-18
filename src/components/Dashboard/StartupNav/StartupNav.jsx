@@ -6,7 +6,7 @@ const StartupNav = () => {
     <div className="navbar fixed top-0 bg-primary text-white">
       <div className="flex-1">
         <Link
-          to="/startup"
+          to="/dashboard"
           className="btn btn-ghost normal-case text-xl drawer-content"
         >
           Dashboard
