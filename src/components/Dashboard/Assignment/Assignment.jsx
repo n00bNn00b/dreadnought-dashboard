@@ -5,66 +5,98 @@ const Assignment = () => {
   const [url, setUrl] = useState("");
   const [linkedIn, setLinkedIn] = useState("");
   const [twitter, setTwitter] = useState("");
+  const [yCombinator, setYcombinator] = useState("");
+  const [aws, setAws] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const companyEmail = e.target.email.value;
+    const companyUrl = e.target.url.value;
+    const companyLinkedIn = e.target.linkedin.value;
+    const companyTwitter = e.target.twitter.value;
+    const companyYcombinator = e.target.ycombinator.value;
+    const companyAws = e.target.aws.value;
+    console.log(companyEmail, companyAws, companyLinkedIn, companyTwitter, companyUrl, companyYcombinator);
   };
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="form-control w-full max-w-sm mx-auto my-20"
+      className="form-control my-20 mx-auto w-full max-w-xs"
     >
-      <h1 className="text-center text-3xl font-bold my-5">
-        Startup Assignment
-      </h1>
       <label className="label">
         <span className="label-text font-bold">
-          Company Email <span className="font-bold text-red-500">*</span>
+          Company Email <span className="text-red-500"> *</span>{" "}
         </span>
       </label>
       <input
         type="email"
-        placeholder="company@example.com"
-        className="input input-bordered w-full max-w-sm"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
         name="email"
-        required
       />
+
       <label className="label">
         <span className="label-text font-bold">
-          Company Website URL<span className="font-bold text-red-500"> *</span>
+          Company Website URL <span className="text-red-500"> *</span>{" "}
         </span>
       </label>
       <input
         type="text"
-        placeholder="www.example.com"
-        className="input input-bordered w-full max-w-sm"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
         name="url"
-        required
       />
+
       <label className="label">
         <span className="label-text font-bold">
-          Company LinkedIn<span className="font-bold text-red-500"> *</span>
+          Company LinkedIn <span className="text-red-500"> *</span>{" "}
         </span>
       </label>
       <input
         type="text"
-        placeholder="https://www.linkedin.com/company/mycompany"
-        className="input input-bordered w-full max-w-sm"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
         name="linkedin"
-        required
       />
+
       <label className="label">
         <span className="label-text font-bold">
-          Company Twitter <span className="font-bold text-red-500"> *</span>
+          Company Twitter <span className="text-red-500"> *</span>{" "}
         </span>
       </label>
       <input
         type="text"
-        placeholder="https://twitter.com/mycompany"
-        className="input input-bordered w-full max-w-sm"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
         name="twitter"
-        required
       />
-      <input type="button" value="Submit" className="mt-5 btn btn-primary" />
+
+      <label className="label">
+        <span className="label-text font-bold">
+          Y Combinator Startup profile <span className="text-red-500"> *</span>{" "}
+        </span>
+      </label>
+      <input
+        type="text"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
+        name="ycombinator"
+      />
+
+      <label className="label">
+        <span className="label-text font-bold">
+          Company AWS Profile <span className="text-red-500"> *</span>{" "}
+        </span>
+      </label>
+      <input
+        type="text"
+        placeholder="email"
+        className="input input-bordered w-full max-w-xs"
+        name="aws"
+      />
+
+      <input type="submit" value="Submit" className="btn btn-primary my-5" />
     </form>
   );
 };
