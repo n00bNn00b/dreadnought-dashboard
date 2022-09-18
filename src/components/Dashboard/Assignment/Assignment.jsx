@@ -36,7 +36,7 @@ const Assignment = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="form-control my-20 mx-auto w-full max-w-xs"
+      className="form-control my-20 mx-auto w-full max-w-sm"
     >
       <label className="label">
         <span className="label-text font-bold">
@@ -46,7 +46,7 @@ const Assignment = () => {
       <input
         type="email"
         placeholder="email@example.com"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="email"
       />
 
@@ -58,7 +58,7 @@ const Assignment = () => {
       <input
         type="text"
         placeholder="www.example.com"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="url"
       />
 
@@ -70,7 +70,7 @@ const Assignment = () => {
       <input
         type="text"
         placeholder="www.linkedin.com/company/mycompany"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="linkedin"
       />
 
@@ -82,7 +82,7 @@ const Assignment = () => {
       <input
         type="text"
         placeholder="www.twitter.com/mycompany"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="twitter"
       />
 
@@ -94,7 +94,7 @@ const Assignment = () => {
       <input
         type="text"
         placeholder="https://ycombinator.com/companies/mycompany"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="ycombinator"
       />
 
@@ -106,7 +106,7 @@ const Assignment = () => {
       <input
         type="text"
         placeholder="email"
-        className="input input-bordered w-full max-w-xs"
+        className="input input-bordered w-full max-w-sm"
         name="aws"
       />
 
