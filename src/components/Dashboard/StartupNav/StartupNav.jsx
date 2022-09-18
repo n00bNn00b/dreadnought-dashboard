@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const StartupNav = () => {
   return (
-    <div className="navbar bg-primary text-white">
+    <div className="navbar bg-primary text-white fixed top-0 z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,7 +57,10 @@ const StartupNav = () => {
       {/* avatar */}
       <div className="flex-none navbar-end">
         <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle">
+          <label
+            tabIndex={0}
+            className="btn btn-ghost btn-circle lg:mx-5 md:mx-2 sm:mx-0"
+          >
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +91,10 @@ const StartupNav = () => {
           </div>
         </div>
         <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <label
+            tabIndex={0}
+            className="btn btn-ghost btn-circle avatar lg:mx-5 md:mx-2 sm:mx-0"
+          >
             <div className="w-10 rounded-full">
               <img src="https://placeimg.com/80/80/people" />
             </div>

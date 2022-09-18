@@ -31,7 +31,7 @@ const Assignment = () => {
     setYcombinator(companyYcombinator);
     setAws(companyAws);
   };
-  console.log(email, url, linkedIn, twitter, yCombinator, aws);
+  //   console.log(email, url, linkedIn, twitter, yCombinator, aws);
 
   return (
     <form
