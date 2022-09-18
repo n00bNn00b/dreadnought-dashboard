@@ -16,8 +16,22 @@ const Assignment = () => {
     const companyTwitter = e.target.twitter.value;
     const companyYcombinator = e.target.ycombinator.value;
     const companyAws = e.target.aws.value;
-    console.log(companyEmail, companyAws, companyLinkedIn, companyTwitter, companyUrl, companyYcombinator);
+    // console.log(
+    //   companyEmail,
+    //   companyAws,
+    //   companyLinkedIn,
+    //   companyTwitter,
+    //   companyUrl,
+    //   companyYcombinator
+    // );
+    setEmail(companyEmail);
+    setUrl(companyUrl);
+    setLinkedIn(companyLinkedIn);
+    setTwitter(companyTwitter);
+    setYcombinator(companyYcombinator);
+    setAws(companyAws);
   };
+  console.log(email, url, linkedIn, twitter, yCombinator, aws);
 
   return (
     <form
@@ -31,7 +45,7 @@ const Assignment = () => {
       </label>
       <input
         type="email"
-        placeholder="email"
+        placeholder="email@example.com"
         className="input input-bordered w-full max-w-xs"
         name="email"
       />
@@ -43,7 +57,7 @@ const Assignment = () => {
       </label>
       <input
         type="text"
-        placeholder="email"
+        placeholder="www.example.com"
         className="input input-bordered w-full max-w-xs"
         name="url"
       />
@@ -55,7 +69,7 @@ const Assignment = () => {
       </label>
       <input
         type="text"
-        placeholder="email"
+        placeholder="www.linkedin.com/company/mycompany"
         className="input input-bordered w-full max-w-xs"
         name="linkedin"
       />
@@ -67,7 +81,7 @@ const Assignment = () => {
       </label>
       <input
         type="text"
-        placeholder="email"
+        placeholder="www.twitter.com/mycompany"
         className="input input-bordered w-full max-w-xs"
         name="twitter"
       />
@@ -79,7 +93,7 @@ const Assignment = () => {
       </label>
       <input
         type="text"
-        placeholder="email"
+        placeholder="https://ycombinator.com/companies/mycompany"
         className="input input-bordered w-full max-w-xs"
         name="ycombinator"
       />
