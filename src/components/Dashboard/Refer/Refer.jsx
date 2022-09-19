@@ -1,10 +1,8 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Reffered from "./Reffered";
 
 const Refer = () => {
   const [code, setCode] = useState("");
-  const [refers, setRefers] = useState([]);
 
   const generateCode = () => {
     const referralCode = Math.round(Math.random() * 1000000);
@@ -17,9 +15,6 @@ const Refer = () => {
     }
   };
 
-  useEffect(() => {
-    axios.get("refer.json").then((res) => setRefers(res.data));
-  }, []);
   //   console.log(refers);
   return (
     <div>
@@ -63,9 +58,7 @@ const Refer = () => {
       <h2 className="my-5 text-center font-bold text-xl text-primary">
         Referred By Me
       </h2>
-      {refers.map((refer) => (
-        <Reffered key={refer.id} refer={refer} />
-      ))}
+      <Reffered />
     </div>
   );
 };
