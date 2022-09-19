@@ -3,6 +3,9 @@ import Reffered from "./Reffered";
 
 const Refer = () => {
   const [code, setCode] = useState("");
+  const [claimed, setClaimed] = useState(false);
+  const [bonus, setBonus] = useState(100);
+  const [earned, setEarned] = useState(0);
 
   const generateCode = () => {
     const referralCode = Math.round(Math.random() * 1000000);
@@ -24,13 +27,25 @@ const Refer = () => {
             Refer & Earn
           </h1>
           <h2>
-            <span className="font-bold text-xl">My Referral Bonus:</span> $50{" "}
+            <span className="font-bold text-xl">My Referral Bonus:</span> $
+            {bonus}
             <span>
-              {" "}
-              <button className="btn btn-sm btn-secondary mx-2">
+              <button
+                onClick={() => {
+                  setClaimed(true);
+                  setEarned(bonus);
+                  setBonus(bonus - bonus);
+                }}
+                className="btn btn-sm btn-secondary mx-2"
+                disabled={claimed}
+              >
                 Claim
-              </button>{" "}
+              </button>
             </span>
+          </h2>
+          <h2>
+            <span className="text-xl font-bold">Total Earned:</span>{" "}
+            <span className="text-warning font-bold">${earned}</span>{" "}
           </h2>
           <div className="my-3">
             <input
@@ -42,7 +57,7 @@ const Refer = () => {
             />
             <div
               className="tooltip tooltip-open tooltip-bottom flex mx-auto mb-5"
-              data-tip="Send the referral code to your friends and earn $50 when they complete milestones"
+              data-tip="Send the referral code to like minded people and earn $50 when they complete milestones"
             >
               <button
                 onClick={generateCode}
