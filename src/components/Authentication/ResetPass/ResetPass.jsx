@@ -1,16 +1,30 @@
 import React from "react";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
 
 const ResetPass = () => {
   const [sendPasswordResetEmail, sending, error] =
     useSendPasswordResetEmail(auth);
 
-  const hadnleReset = (e) => {
+  if (sending) {
+    return <Loading />;
+  }
+  if (error) {
+    toast.error("Something went wrong! Please try again later.");
+  }
+  const hadnleReset = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const confirmEmail = e.target.confirmEmail.value;
-    console.log(email, confirmEmail);
+    e.target.reset();
+    if (email !== confirmEmail) {
+      toast.warning("Email does not match!");
+    } else {
+      await sendPasswordResetEmail(email);
+      toast.success("Password Reset Link has been sent!");
+    }
   };
 
   return (
