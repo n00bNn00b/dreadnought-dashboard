@@ -5,6 +5,8 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import { toast } from "react-toastify";
+import Loading from "../../Loading/Loading";
 
 const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -13,15 +15,15 @@ const Signup = () => {
   const navigate = useNavigate();
 
   if (user) {
-    console.log("signup:", user);
+    navigate("/login");
   }
 
   if (loading || updating) {
-    return <div>updating...</div>;
+    return <Loading />;
   }
 
   if (error || errorProfile) {
-    console.log("Error: ", error.message || errorProfile.message);
+    toast.error("Something Went wrong! Please try again later.");
   }
 
   const handleSignUp = async (e) => {
@@ -32,7 +34,7 @@ const Signup = () => {
     const confirmPass = e.target.confirmPass.value;
 
     if (password !== confirmPass) {
-      alert("Error");
+      toast.error("Password does not match!");
     } else {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });

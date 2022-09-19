@@ -1,11 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/dashboard";
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    toast.error("Login failed! Try again later.");
+  }
+
+  const handleSignIn = async (e) => {
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    e.target.reset();
+    await signInWithEmailAndPassword(email, password);
+  };
+
   return (
-    <form className="form-control card bg-base-100 shadow-2xl w-full max-w-sm my-20 mx-auto">
+    <form
+      onSubmit={handleSignIn}
+      className="form-control card bg-base-100 shadow-2xl w-full max-w-sm my-20 mx-auto"
+    >
       <div className="card-body">
-        <h2 className="text-center font-bold text-primary text-3xl my-5">
+        <h2 className="text-center drop-shadow-2xl font-bold text-primary text-3xl my-5">
           Sign In
         </h2>
 
@@ -46,7 +77,7 @@ const SignIn = () => {
           </Link>
         </div>
 
-        <input type="submit" value="Sign Up" className="btn btn-primary my-5" />
+        <input type="submit" value="Sign In" className="btn btn-primary my-5" />
       </div>
     </form>
   );

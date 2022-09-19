@@ -8,6 +8,8 @@ import Profile from "./components/Dashboard/Profile/Profile";
 import Settings from "./components/Dashboard/Settings/Settings";
 import Startup from "./components/Dashboard/Startup/Startup";
 import StartupNav from "./components/Dashboard/StartupNav/StartupNav";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/reset" element={<ResetPass />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
