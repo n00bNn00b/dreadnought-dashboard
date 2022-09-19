@@ -27,13 +27,13 @@ const StartupNav = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <Link to="/courses">Courses</Link>
             </li>
             <li>
-              <Link to="#">Item 2</Link>
+              <Link to="#">Assignment</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link to="/refer">Refer & Earn</Link>
             </li>
           </ul>
         </div>
@@ -44,13 +44,13 @@ const StartupNav = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Item 1</a>
+            <Link to="/courses">Courses</Link>
           </li>
           <li>
-            <Link to="#">Item 2</Link>
+            <Link to="#">Assignment</Link>
           </li>
           <li>
-            <a>Item 3</a>
+            <Link to="/refer">Refer & Earn</Link>
           </li>
         </ul>
       </div>
@@ -96,7 +96,7 @@ const StartupNav = () => {
             className="btn btn-ghost btn-circle avatar lg:mx-5 md:mx-2 sm:mx-0"
           >
             <div className="w-10 rounded-full">
-              <img src="https://placeimg.com/80/80/people" />
+              <img src="https://placeimg.com/80/80/people" alt="avatar" />
             </div>
           </label>
           <ul
@@ -104,16 +104,16 @@ const StartupNav = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
+              <Link to="/profile" className="justify-between">
                 Profile
                 <span className="badge">New</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a>Settings</a>
+              <Link to="/settings">Settings</Link>
             </li>
             <li>
-              <a>Logout</a>
+              <button>Logout</button>
             </li>
           </ul>
         </div>
