@@ -15,7 +15,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   if (user) {
-    navigate("/login");
+    navigate("/signin");
   }
 
   if (loading || updating) {
@@ -23,7 +23,7 @@ const Signup = () => {
   }
 
   if (error || errorProfile) {
-    toast.error("Something Went wrong! Please try again later.");
+    // toast.error("Something Went wrong! Please try again later.");
   }
 
   const handleSignUp = async (e) => {
@@ -38,7 +38,7 @@ const Signup = () => {
     } else {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });
-      console.log("user: ", user);
+      //   console.log("user: ", user);
     }
   };
   return (

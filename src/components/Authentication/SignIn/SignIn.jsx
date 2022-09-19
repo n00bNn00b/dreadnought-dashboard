@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 const SignIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,10 +26,10 @@ const SignIn = () => {
   }
 
   const handleSignIn = async (e) => {
-    const loginEmail = e.target.email.value;
-    const loginPassword = e.target.password.value;
-    setEmail(loginEmail);
-    setPassword(loginPassword);
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    // setEmail(loginEmail);
+    // setPassword(loginPassword);
     e.target.reset();
     await signInWithEmailAndPassword(email, password);
     console.log(error?.message);

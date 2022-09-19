@@ -6,6 +6,7 @@ import auth from "../../../firebase.init";
 
 const StartupNav = () => {
   const [user] = useAuthState(auth);
+  // console.log(user);
   return (
     <nav className="navbar bg-primary text-white fixed top-0 z-20">
       <div className="navbar-start">
@@ -110,17 +111,16 @@ const StartupNav = () => {
             <li>
               <Link to="/profile" className="justify-between">
                 Profile
-                <span className="badge">New</span>
               </Link>
             </li>
             <li>
               <Link to="/settings">Settings</Link>
             </li>
             <li>
-              {!user ? (
-                <Link to="/signin">Signin</Link>
-              ) : (
+              {user ? (
                 <button onClick={signOut(auth)}>Signout</button>
+              ) : (
+                <Link to="/signin">Signin</Link>
               )}
             </li>
           </ul>
