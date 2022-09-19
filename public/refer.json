@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Cy Ganderton",
+    "email": "danderton@example.com",
+    "signup": "Complete",
+    "milestone": "Complete",
+    "percentage": "100%"
+  },
+  {
+    "id": 2,
+    "name": "Felicia Herman",
+    "email": "felicia@example.com",
+    "signup": "Complete",
+    "milestone": "Complete",
+    "percentage": "100%"
+  },
+  {
+    "id": 3,
+    "name": "Hart Hagerty",
+    "email": "hagerty@example.com",
+    "signup": "Complete",
+    "milestone": "Incomplete",
+    "percentage": "80%"
+  },
+  {
+    "id": 4,
+    "name": "Brice Swyre",
+    "email": "bswyre@example.com",
+    "signup": "Complete",
+    "milestone": "Incomplete",
+    "percentage": "50%"
+  },
+  {
+    "id": 5,
+    "name": "Robert De William",
+    "email": "robertwilliam@example.com",
+    "signup": "Complete",
+    "milestone": "Incomplete",
+    "percentage": "60%"
+  }
+]
