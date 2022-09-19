@@ -20,7 +20,7 @@ const Refer = () => {
   useEffect(() => {
     axios.get("refer.json").then((res) => setRefers(res.data));
   }, []);
-  console.log(refers);
+  //   console.log(refers);
   return (
     <div>
       <div className="card bg-base-100 shadow-2xl form-control w-full max-w-sm mx-auto my-20">
@@ -59,6 +59,10 @@ const Refer = () => {
           </div>
         </div>
       </div>
+      <div className="divider mx-5" />
+      <h2 className="my-5 text-center font-bold text-xl text-primary">
+        Referred By Me
+      </h2>
       {refers.map((refer) => (
         <Reffered key={refer.id} refer={refer} />
       ))}

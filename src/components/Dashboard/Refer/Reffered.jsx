@@ -4,10 +4,6 @@ const Reffered = ({ refer }) => {
   const { id, email, name, milestone, percentage, signup } = refer;
   return (
     <div>
-      <div className="divider mx-5" />
-      <h2 className="my-5 text-center font-bold text-xl text-primary">
-        Referred By Me
-      </h2>
       <div className="overflow-x-auto mx-5">
         <table className="table w-full ">
           <thead>
