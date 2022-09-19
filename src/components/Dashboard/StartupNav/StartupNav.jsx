@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const StartupNav = () => {
   return (
-    <div className="navbar bg-primary text-white fixed top-0 z-20">
+    <nav className="navbar bg-primary text-white fixed top-0 z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -118,7 +118,7 @@ const StartupNav = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
