@@ -4,15 +4,19 @@ import { useUpdateProfile } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
+import { useUpdatePassword } from "react-firebase-hooks/auth";
 
 const Settings = () => {
   const [updateEmail, updating, error] = useUpdateEmail(auth);
   const [updateProfile, updatingName, errorName] = useUpdateProfile(auth);
-  if (updating || updatingName) {
+  const [updatePassword, updatingPass, errorPass] = useUpdatePassword(auth);
+
+  if (updating || updatingName || updatingPass) {
     return <Loading />;
   }
-  if (error || errorName) {
+  if (error || errorName || errorPass) {
     toast.error("Something went wrong! Try Again Later.");
+    // console.log(errorPass);
   }
   const hadnleEmailUpdate = async (e) => {
     e.preventDefault();
@@ -32,6 +36,13 @@ const Settings = () => {
     // console.log(name);
   };
 
+  const handlePasswordChange = async (e) => {
+    e.preventDefault();
+    const password = e.target.password.value;
+    // console.log(password);
+    await updatePassword(password);
+    toast.success("Password Changed Successfully!");
+  };
   return (
     <div className="card bg-base-100 shadow-2xl form-control w-full max-w-sm mx-auto my-20 py-20">
       <div className="card-body-5">
@@ -96,7 +107,10 @@ const Settings = () => {
         </form>
 
         {/* password settings */}
-        <form className="collapse collapse-arrow">
+        <form
+          onSubmit={handlePasswordChange}
+          className="collapse collapse-arrow"
+        >
           <input type="checkbox" />
           <div className="collapse-title text-xl font-medium">
             Change Password

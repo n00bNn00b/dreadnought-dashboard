@@ -8,7 +8,7 @@ const Courses = () => {
   useEffect(() => {
     axios.get("courses.json").then((res) => setCourses(res.data));
   }, []);
-  console.log(courses);
+  // console.log(courses);
   return (
     <div className=" my-20">
       <h2 className="text-center font-bold text-3xl text-primary">

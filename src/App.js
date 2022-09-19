@@ -13,21 +13,71 @@ import "react-toastify/dist/ReactToastify.css";
 import Refer from "./components/Dashboard/Refer/Refer";
 import Footer from "./components/Footer/Footer";
 import Assignment from "./components/Dashboard/Assignment/Assignment";
+import RequireAuth from "./components/Authentication/RequireAuth";
 
 function App() {
   return (
     <div>
       <StartupNav />
       <Routes>
-        <Route path="/dashboard" element={<Startup />} />
-        <Route path="/courses" element={<AllCourses />} />
-        <Route path="/assignment" element={<Assignment />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/refer" element={<Refer />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Startup />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/courses"
+          element={
+            <RequireAuth>
+              <AllCourses />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/assignment"
+          element={
+            <RequireAuth>
+              <Assignment />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <Profile />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/refer"
+          element={
+            <RequireAuth>
+              <Refer />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <RequireAuth>
+              <Settings />
+            </RequireAuth>
+          }
+        />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signIn" element={<SignIn />} />
-        <Route path="/reset" element={<ResetPass />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route
+          path="/reset"
+          element={
+            <RequireAuth>
+              <ResetPass />
+            </RequireAuth>
+          }
+        />
       </Routes>
       <Footer />
       <ToastContainer />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -8,10 +8,12 @@ import { toast } from "react-toastify";
 const SignIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
-  let from = location.state?.from?.pathname || "/dashboard";
+  let from = location?.state?.from?.pathname || "/dashboard";
 
   if (user) {
     navigate(from, { replace: true });
@@ -24,10 +26,13 @@ const SignIn = () => {
   }
 
   const handleSignIn = async (e) => {
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const loginEmail = e.target.email.value;
+    const loginPassword = e.target.password.value;
+    setEmail(loginEmail);
+    setPassword(loginPassword);
     e.target.reset();
     await signInWithEmailAndPassword(email, password);
+    console.log(error?.message);
   };
 
   return (

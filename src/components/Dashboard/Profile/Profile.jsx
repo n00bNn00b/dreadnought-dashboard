@@ -4,7 +4,7 @@ import auth from "../../../firebase.init";
 
 const Profile = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  //   console.log(user);
   return (
     <div className="card bg-base-100 shadow-xl w-96 mx-auto my-20">
       <div className="card-body">
