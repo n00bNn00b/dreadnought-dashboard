@@ -45,7 +45,7 @@ const Signup = () => {
       className="form-control card bg-base-100 shadow-2xl w-full max-w-sm my-20 mx-auto"
     >
       <div className="card-body">
-        <h2 className="text-center font-bold text-primary text-3xl my-5">
+        <h2 className="text-center drop-shadow-lg font-bold text-primary text-3xl my-5">
           SignUp
         </h2>
         <label className="label">
@@ -53,7 +53,7 @@ const Signup = () => {
         </label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="i.e.: Felicia Herman"
           className="input input-bordered w-full max-w-sm"
           name="name"
           required
@@ -66,7 +66,7 @@ const Signup = () => {
         </label>
         <input
           type="email"
-          placeholder="Type here"
+          placeholder="i.e.: felicia@example.com "
           className="input input-bordered w-full max-w-sm"
           name="email"
           required
@@ -77,7 +77,7 @@ const Signup = () => {
         </label>
         <input
           type="password"
-          placeholder="Type here"
+          placeholder="password"
           className="input input-bordered w-full max-w-sm"
           name="password"
           required
@@ -90,7 +90,7 @@ const Signup = () => {
         </label>
         <input
           type="password"
-          placeholder="Type here"
+          placeholder="password"
           className="input input-bordered w-full max-w-sm"
           name="confirmPass"
           required
