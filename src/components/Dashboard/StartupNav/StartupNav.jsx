@@ -30,7 +30,7 @@ const StartupNav = () => {
               <Link to="/courses">Courses</Link>
             </li>
             <li>
-              <Link to="#">Assignment</Link>
+              <Link to="/assignment">Assignment</Link>
             </li>
             <li>
               <Link to="/refer">Refer & Earn</Link>
@@ -47,7 +47,7 @@ const StartupNav = () => {
             <Link to="/courses">Courses</Link>
           </li>
           <li>
-            <Link to="#">Assignment</Link>
+            <Link to="/assignment">Assignment</Link>
           </li>
           <li>
             <Link to="/refer">Refer & Earn</Link>

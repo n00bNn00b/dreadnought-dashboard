@@ -34,84 +34,87 @@ const Assignment = () => {
   //   console.log(email, url, linkedIn, twitter, yCombinator, aws);
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="form-control my-20 mx-auto w-full max-w-sm"
-    >
-      <label className="label">
-        <span className="label-text font-bold">
-          Company Email <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="email"
-        placeholder="email@example.com"
-        className="input input-bordered w-full max-w-sm"
-        name="email"
-      />
+    <div>
+      <form
+        onSubmit={handleSubmit}
+        className="form-control my-20 mx-auto w-full max-w-sm"
+      >
+        <label className="label">
+          <span className="label-text font-bold">
+            Company Email <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="email"
+          placeholder="email@example.com"
+          className="input input-bordered w-full max-w-sm"
+          name="email"
+        />
 
-      <label className="label">
-        <span className="label-text font-bold">
-          Company Website URL <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="www.example.com"
-        className="input input-bordered w-full max-w-sm"
-        name="url"
-      />
+        <label className="label">
+          <span className="label-text font-bold">
+            Company Website URL <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="www.example.com"
+          className="input input-bordered w-full max-w-sm"
+          name="url"
+        />
 
-      <label className="label">
-        <span className="label-text font-bold">
-          Company LinkedIn <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="www.linkedin.com/company/mycompany"
-        className="input input-bordered w-full max-w-sm"
-        name="linkedin"
-      />
+        <label className="label">
+          <span className="label-text font-bold">
+            Company LinkedIn <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="www.linkedin.com/company/mycompany"
+          className="input input-bordered w-full max-w-sm"
+          name="linkedin"
+        />
 
-      <label className="label">
-        <span className="label-text font-bold">
-          Company Twitter <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="www.twitter.com/mycompany"
-        className="input input-bordered w-full max-w-sm"
-        name="twitter"
-      />
+        <label className="label">
+          <span className="label-text font-bold">
+            Company Twitter <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="www.twitter.com/mycompany"
+          className="input input-bordered w-full max-w-sm"
+          name="twitter"
+        />
 
-      <label className="label">
-        <span className="label-text font-bold">
-          Y Combinator Startup profile <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="https://ycombinator.com/companies/mycompany"
-        className="input input-bordered w-full max-w-sm"
-        name="ycombinator"
-      />
+        <label className="label">
+          <span className="label-text font-bold">
+            Y Combinator Startup profile{" "}
+            <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="https://ycombinator.com/companies/mycompany"
+          className="input input-bordered w-full max-w-sm"
+          name="ycombinator"
+        />
 
-      <label className="label">
-        <span className="label-text font-bold">
-          Company AWS Profile <span className="text-red-500"> *</span>{" "}
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="email"
-        className="input input-bordered w-full max-w-sm"
-        name="aws"
-      />
+        <label className="label">
+          <span className="label-text font-bold">
+            Company AWS Profile <span className="text-red-500"> *</span>{" "}
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="email"
+          className="input input-bordered w-full max-w-sm"
+          name="aws"
+        />
 
-      <input type="submit" value="Submit" className="btn btn-primary my-5" />
-    </form>
+        <input type="submit" value="Submit" className="btn btn-primary my-5" />
+      </form>
+    </div>
   );
 };
 

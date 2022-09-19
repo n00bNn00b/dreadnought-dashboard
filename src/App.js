@@ -11,6 +11,8 @@ import StartupNav from "./components/Dashboard/StartupNav/StartupNav";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Refer from "./components/Dashboard/Refer/Refer";
+import Footer from "./components/Footer/Footer";
+import Assignment from "./components/Dashboard/Assignment/Assignment";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Startup />} />
         <Route path="/courses" element={<AllCourses />} />
+        <Route path="/assignment" element={<Assignment />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/refer" element={<Refer />} />
         <Route path="/settings" element={<Settings />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/reset" element={<ResetPass />} />
       </Routes>
+      <Footer />
       <ToastContainer />
     </div>
   );

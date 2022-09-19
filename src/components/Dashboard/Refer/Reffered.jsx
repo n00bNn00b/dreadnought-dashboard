@@ -8,7 +8,7 @@ const Reffered = () => {
     axios.get("refer.json").then((res) => setRefers(res.data));
   }, []);
   return (
-    <div>
+    <div className="mb-20">
       <div className="overflow-x-auto mx-5">
         <table className="table w-full ">
           <thead>
