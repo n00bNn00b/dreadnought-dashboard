@@ -10,6 +10,7 @@ import Startup from "./components/Dashboard/Startup/Startup";
 import StartupNav from "./components/Dashboard/StartupNav/StartupNav";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Refer from "./components/Dashboard/Refer/Refer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Startup />} />
         <Route path="/courses" element={<AllCourses />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/refer" element={<Refer />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signIn" element={<SignIn />} />
